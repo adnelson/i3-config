@@ -27,7 +27,7 @@ font pango:Terminus 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -167,3 +167,9 @@ bindsym $mod+Shift+m exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2
 
 # Previous song in spotify player
 bindsym $mod+Shift+n exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+
+# Take a box screenshot
+bindsym $mod+Shift+i exec "scrot -s ~/%Y-%m-%d-%T-screenshot.png"
+
+# Take a full screenshot
+bindsym $mod+Shift+o exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
